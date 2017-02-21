@@ -1,6 +1,6 @@
 package space.clang;
 
-public class AdminVisitor implements IVisitor {
+public class AdminVisitor implements IAdminVisitor {
     public IPage start() {
         return new PageB();
     }
@@ -15,9 +15,5 @@ public class AdminVisitor implements IVisitor {
         } else {
             page.setNextPage(new PageC());
         }
-    }
-
-    public void visit(PageC page) {
-        page.setNextPage(null);
     }
 }
