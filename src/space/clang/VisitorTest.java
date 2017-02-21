@@ -15,4 +15,14 @@ public class VisitorTest {
         }
     }
 
+    @Test
+    public void test_cancleB_AB() {
+        IVisitor visitor = new VisitorRow();
+
+        IPage page = visitor.start();
+        while (page != null) {
+            page.accept(visitor);
+            page = page.getNextPage();
+        }
+    }
 }

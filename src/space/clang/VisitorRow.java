@@ -10,7 +10,11 @@ public class VisitorRow implements IVisitor {
     }
 
     public void visit(PageB page) {
-        page.setNextPage(new PageC());
+        if (page.clickOnCancel()) {
+            page.setNextPage(null);
+        } else {
+            page.setNextPage(new PageC());
+        }
     }
 
     public void visit(PageC page) {
