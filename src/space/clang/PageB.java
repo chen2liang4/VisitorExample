@@ -6,7 +6,7 @@ public class PageB implements IPage {
 
     public void accept(IVisitor v) {
         System.out.println("show page B");
-        cancelClicked = true;
+        cancelClicked = false;
         v.visit(this);
     }
 
