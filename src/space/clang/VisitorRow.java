@@ -13,7 +13,9 @@ public class VisitorRow implements IVisitor {
         if (page.clickOnCancel()) {
             page.setNextPage(null);
         } else {
-            page.setNextPage(new PageC());
+            PageC c = new PageC();
+            c.input = page.context;
+            page.setNextPage(c);
         }
     }
 

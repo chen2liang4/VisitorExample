@@ -4,9 +4,12 @@ public class PageB implements IPage {
     private IPage nextPage;
     private boolean cancelClicked;
 
+    public String context;
+
     public void accept(IVisitor v) {
         System.out.println("show page B");
-        cancelClicked = true;
+        cancelClicked = false;
+        this.context = "come from B";
         v.visit(this);
     }
 
