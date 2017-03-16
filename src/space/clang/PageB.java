@@ -29,4 +29,8 @@ public class PageB implements IPage {
     public boolean clickOnCancel() {
         return this.cancelClicked;
     }
+
+    protected void onClick () {
+
+    }
 }
